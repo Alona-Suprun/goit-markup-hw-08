@@ -5,3 +5,36 @@
     padding-top: 0;
   }
 }
+.work-example {
+  display: flex;
+  margin-top: 50px;
+  .item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+  }
+  .item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .item::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    background-color: $label-background;
+  }
+}
+.work-example-image {
+  display: block;
+}
+.work-example-title {
+  position: absolute;
+  bottom: 27px;
+
+  font-weight: $font-weight-bold;
+  color: $main-background-color;
+}
