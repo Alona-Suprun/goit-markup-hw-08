@@ -44,6 +44,12 @@ p {
     width: 1200px;
   }
 }
+.section {
+  padding: 60px 0px;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0px;
+  }
+}
 .button {
   min-width: 200px;
   border: 0px solid transparent;
