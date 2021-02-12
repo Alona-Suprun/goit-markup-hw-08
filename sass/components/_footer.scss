@@ -1,0 +1,112 @@
+.footer {
+  padding: 60px 0px;
+  text-align: center;
+
+  background-color: $footer-background-color;
+}
+
+.address {
+  color: $main-background-color;
+  font-style: normal;
+  font-weight: $font-weigh-normal;
+  font-size: 14px;
+  line-height: 1.71;
+  @media screen and (max-width: 1199px) {
+    .list {
+      margin-bottom: 60px;
+    }
+  }
+  a {
+    color: $footer-contacts;
+  }
+  li {
+    margin-top: 9px;
+  }
+}
+.city {
+  margin-top: 20px;
+}
+/*присоединяйтесь*/
+.join {
+  justify-content: center;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+}
+.join-title {
+  font-weight: $font-weight-bold;
+  color: $main-background-color;
+}
+.join-socials {
+  padding: 0px;
+  margin-top: 20px;
+}
+.socials-white {
+  color: $main-background-color;
+}
+
+.contact-us {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+}
+.contact-us-address {
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
+}
+/*Форма подписки*/
+.join-form {
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.join-fild {
+  display: block;
+  margin-top: 20px;
+}
+.join-email {
+  height: 50px;
+  padding: 15px 16px;
+
+  font-size: 16px;
+  font-family: inherit;
+  color: $footer-contacts;
+  border: 1px solid $join-email-border;
+  border-radius: 4px;
+  background-color: $footer-background-color;
+
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
+}
+.join-button {
+  position: relative;
+
+  padding: 10px 0px;
+  @media screen and (max-width: 1199px) {
+    margin-top: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
+}
+
+.join-button-text {
+  margin-right: 28px;
+}
+.join-icon {
+  position: absolute;
+  top: 13px;
+  left: 148px;
+}
