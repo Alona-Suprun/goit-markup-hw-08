@@ -1005,9 +1005,238 @@ img {
   left: 148px;
 }
 
+/*модалка*/
+.backdrop {
+  position: fixed;
+  inset: 0;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+          transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 4px;
+  background-color: white;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-modal-icon {
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: currentColor;
+}
+
+.close-modal:hover .close-modal-icon,
+.close-modal:focus .close-modal-icon {
+  color: #2196f3;
+}
+
+/*форма в модалке*/
+.modal-form {
+  padding: 40px;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  fill: currentColor;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-area:focus-within > .modal-icon {
+  color: #2196f3;
+}
+
+.modal-form-field {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.modal-header {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.04;
+  text-align: center;
+}
+
+.modal-form-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+.form-input {
+  width: 100%;
+  margin-top: 4px;
+  padding: 11px 12px;
+  padding-left: 42px;
+  font: inherit;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-area:focus-within > .form-input {
+  border-color: #2196f3;
+}
+
+.input-area {
+  position: relative;
+}
+
+.textarea {
+  height: 120px;
+  padding: 12px 16px;
+  font-size: 14px;
+  line-height: 1.14;
+  resize: none;
+  outline: none;
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.textarea::-webkit-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.textarea:-ms-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.textarea::-ms-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form-label:focus-within > .textarea {
+  border-color: #2196f3;
+}
+
+.checkbox-label {
+  position: relative;
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-label {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+.checkbox-link {
+  text-decoration-skip-ink: none;
+  text-decoration: underline;
+  color: #2196f3;
+}
+
+.checkbox {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 16px;
+  height: 15px;
+  border: 1px solid #212121;
+}
+
+.checkbox-text {
+  margin-left: 24.38px;
+}
+
+.checkbox-box:checked + .checkbox {
+  border-color: transparent;
+  background-color: #2196f3;
+  border-radius: 2px;
+  background-image: url("../img/icon-check.svg");
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.modal-form-button {
+  text-align: center;
+}
+
+.modal-button {
+  margin-top: 30px;
+  padding: 10px 0px;
+}
+
 /*
 @import "components/radio-button";
 @import "components/cards";
 
-@import "components/modal";*/
+*/
 /*# sourceMappingURL=main.css.map */
