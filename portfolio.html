@@ -17,10 +17,10 @@
                 <a class="logo" href="./index.html" lang="en">Web<span class="logo-part-black">Studio</span></a>
                 <ul class="main-nav list">
                     <li class="item">
-                        <a class="current link" href="./index.html">Студия</a>
+                        <a class="link" href="./index.html">Студия</a>
                     </li>
                     <li class="item">
-                        <a class="link" href="./portfolio.html">Портфолио</a>
+                        <a class="current link" href="./portfolio.html">Портфолио</a>
                     </li>
                     <li class="item">
                         <a class="link" href="#contacts">Контакты</a>
@@ -41,6 +41,7 @@
                         </svg>+38 096 111 11 11</a>
                 </li>
             </ul>
+            <!--мобильное меню-->
             <div class="mob-menu">
                 <div class="menu-container" id="menu-container" data-menu>
                     <ul class="mob-nav list">
@@ -56,11 +57,17 @@
                     </ul>
                     <ul class="contacts-mob list">
                         <li class="item">
-                            <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                            <a class="tel-link" href="tel:+380961111111">+38 096 111 11 11</a>
                         </li>
-                        <li class="item">
-                            <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
+                        <li>
+                            <a class="mail-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
                         </li>
+                    </ul>
+                    <ul class="menu-socials list">
+                        <li class="menu-socials-item"><a href="" class="menu-socials-link">Instagram</a></li>
+                        <li class="menu-socials-item"><a href="" class="menu-socials-link">Twitter</a></li>
+                        <li class="menu-socials-item"><a href="" class="menu-socials-link">Facebook</a></li>
+                        <li class="menu-socials-item"><a href="" class="menu-socials-link">LinkedIn</a></li>
                     </ul>
                 </div>
                 <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
@@ -89,12 +96,15 @@
             <!--карточки-->
             <div class="conteiner">
             <ul class="cards-set list">
-                <li class="item"><a class="card-link" href="">
-                    <div class="card"><img class="card-image" src="./img/card1.jpg"
-                    alt="Открытый лептоп с изображением веб-сайта"
-                    width="370"
-                    height="294">
-                    <div class="card-overlay">
+                <li class="cards-set-item"><a class="card-link" href="">
+                    <div class="card">
+                        <picture class="card-image">
+                            <source srcset="../img/desk/d-card1.jpg 1x, ../img/desk/d-card1@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="../img/tab/tab-card1.jpg 1x, ../img/tab/tab-card1@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="../img/mob/mob-card1@2x.jpg 2x" media="(max-width: 767px)" />
+                            <img src="../img/mob/mob-card1.jpg" alt="Открытый лептоп с изображением веб-сайта" />
+                        </picture>                     
+                     <div class="card-overlay">
                     <p class="card-overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
                     шпионажа и атак на защищённые сервера конкурентов.</p></div></div>
                     <div class="card-text">
@@ -103,11 +113,14 @@
                     </div>
                     </a>
                 </li>
-                <li class="item"><a class="card-link" href="">
-                    <div class="card"><img class="card-image" src="./img/card2.jpg"
-                    alt="Два игрока с баскетбольнім мячем"
-                    width="370"
-                    height="294">
+                <li class="cards-set-item"><a class="card-link" href="">
+                    <div class="card">
+                        <picture class="card-image">
+                            <source srcset="../img/desk/d-card2.jpg 1x, ../img/desk/d-card2@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="../img/tab/tab-card2.jpg 1x, ../img/tab/tab-card2@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="../img/mob/mob-card2@2x.jpg 2x" media="(max-width: 767px)" />
+                            <img src="../img/mob/mob-card2.jpg" alt="Два игрока с баскетбольнім мяч" />
+                        </picture>
                     <div class="card-overlay">
                     <p class="card-overlay-text">Постер New Orlean vs Golden Star.</p></div></div>
                     <div class="card-text">
@@ -116,11 +129,14 @@
                     </div>
                      </a>
                 </li>
-                <li class="item"><a class="card-link" href="">
-                    <div class="card"><img class="card-image" src="./img/card3.jpg"
-                    alt="Логотип ресторана в виде рыбы"
-                    width="370"
-                    height="294">
+                <li class="cards-set-item"><a class="card-link" href="">
+                    <div class="card">
+                        <picture class="card-image">
+                            <source srcset="../img/desk/d-card3.jpg 1x, ../img/desk/d-card3@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="../img/tab/tab-card3.jpg 1x, ../img/tab/tab-card3@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="../img/mob/mob-card3@2x.jpg 2x" media="(max-width: 767px)" />
+                            <img src="../img/mob/mob-card3.jpg" alt="Логотип ресторана в виде рыбы" />
+                        </picture>    
                     <div class="card-overlay">
                     <p class="card-overlay-text">Ресторан Seafood.</p>
                     </div></div>
@@ -130,11 +146,14 @@
                     </div>
                     </a>
                 </li>
-                <li class="item"><a class="card-link" href="">
-                    <div class="card"><img class="card-image" src="./img/card4.jpg"
-                    alt="Безпроводные акустические наушники черного цвета"
-                    width="370"
-                    height="294">
+                <li class="cards-set-item"><a class="card-link" href="">
+                    <div class="card">
+                        <picture class="card-image">
+                            <source srcset="../img/desk/d-card4.jpg 1x, ../img/desk/d-card4@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="../img/tab/tab-card4.jpg 1x, ../img/tab/tab-card4@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="../img/mob/mob-card4@2x.jpg 2x" media="(max-width: 767px)" />
+                            <img src="../img/mob/mob-card4.jpg" alt="Безпроводные акустические наушники черного цвета" />
+                        </picture>                        
                     <div class="card-overlay">
                     <p class="card-overlay-text">Проект Prime.</p>
                     </div></div>
@@ -144,11 +163,14 @@
                     </div>
                     </a>
                 </li>
-                <li class="item"><a class="card-link" href="">
-                    <div class="card"><img class="card-image" src="./img/card5.jpg"
-                    alt="Две коробки: большая белая и маленькая коричневая"
-                    width="370"
-                    height="294">
+                <li class="cards-set-item"><a class="card-link" href="">
+                    <div class="card">
+                        <picture class="card-image">
+                            <source srcset="../img/desk/d-card5.jpg 1x, ../img/desk/d-card5@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="../img/tab/tab-card5.jpg 1x, ../img/tab/tab-card5@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="../img/mob/mob-card5@2x.jpg 2x" media="(max-width: 767px)" />
+                            <img src="../img/mob/mob-card5.jpg" alt="Две коробки: большая белая и маленькая коричневая" />
+                        </picture>            
                     <div class="card-overlay">
                     <p class="card-overlay-text">Проект Boxes.</p>
                     </div></div>
@@ -158,11 +180,14 @@
                     </div>
                     </a>
                 </li>
-                <li class="item"><a class="card-link" href="">
-                    <div class="card"><img class="card-image" src="./img/card6.jpg"
-                    alt="Монитор компьютера с изображением веб-сайта"
-                    width="370"
-                    height="294">
+                <li class="cards-set-item"><a class="card-link" href="">
+                    <div class="card">
+                        <picture class="card-image">
+                            <source srcset="../img/desk/d-card6.jpg 1x, ../img/desk/d-card6@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="../img/tab/tab-card6.jpg 1x, ../img/tab/tab-card6@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="../img/mob/mob-card6@2x.jpg 2x" media="(max-width: 767px)" />
+                            <img src="../img/mob/mob-card6.jpg" alt="Монитор компьютера с изображением веб-сайта" />
+                        </picture>                      
                     <div class="card-overlay">
                     <p class="card-overlay-text">Inspiration has no Borders.</p>
                     </div></div>
@@ -172,11 +197,14 @@
                     </div>
                     </a>
                 </li>
-                <li class="item"><a class="card-link" href="">
-                    <div class="card"><img class="card-image" src="./img/card7.jpg"
-                    alt="Открытый журнал"
-                    width="370"
-                    height="294">
+                <li class="cards-set-item"><a class="card-link" href="">
+                    <div class="card">
+                        <picture class="card-image">
+                            <source srcset="../img/desk/d-card7.jpg 1x, ../img/desk/d-card7@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="../img/tab/tab-card7.jpg 1x, ../img/tab/tab-card7@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="../img/mob/mob-card7@2x.jpg 2x" media="(max-width: 767px)" />
+                            <img src="../img/mob/mob-card7.jpg" alt="Открытый журнал" />
+                        </picture>                        
                     <div class="card-overlay">
                     <p class="card-overlay-text">Издание Limited Edition.</p>
                     </div></div>
@@ -186,11 +214,14 @@
                 </div>
                 </a>
                 </li>
-                <li class="item"><a class="card-link" href="">
-                    <div class="card"><img class="card-image" src="./img/card8.jpg"
-                    alt="Лейба"
-                    width="370"
-                    height="294">
+                <li class="cards-set-item"><a class="card-link" href="">
+                    <div class="card">
+                        <picture class="card-image">
+                            <source srcset="../img/desk/d-card8.jpg 1x, ../img/desk/d-card8@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="../img/tab/tab-card8.jpg 1x, ../img/tab/tab-card8@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="../img/mob/mob-card8@2x.jpg 2x" media="(max-width: 767px)" />
+                            <img src="../img/mob/mob-card8.jpg" alt="Лейба" />
+                        </picture>                       
                     <div class="card-overlay">
                     <p class="card-overlay-text">Проект LAB.</p>
                     </div></div>
@@ -200,11 +231,14 @@
                     </div>
                     </a>
                 </li>
-                <li class="item"><a class="card-link" href="">
-                    <div class="card"><img class="card-image" src="./img/card9.jpg"
-                    alt="Кто-то работает на лептопе"
-                    width="370"
-                    height="294">
+                <li class="cards-set-item"><a class="card-link" href="">
+                    <div class="card">
+                        <picture class="card-image">
+                            <source srcset="../img/desk/d-card9.jpg 1x, ../img/desk/d-card9@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="../img/tab/tab-card9.jpg 1x, ../img/tab/tab-card9@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="../img/mob/mob-card9@2x.jpg 2x" media="(max-width: 767px)" />
+                            <img src="../img/mob/mob-card9.jpg" alt="Кто-то работает на лептопе" />
+                        </picture>                       
                     <div class="card-overlay">
                     <p class="card-overlay-text">Growing Business.</p>
                     </div></div>
