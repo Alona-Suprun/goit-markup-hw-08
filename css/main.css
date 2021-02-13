@@ -1173,12 +1173,6 @@ img {
   margin-left: 30px;
 }
 
-@media screen and (max-width: 767px) {
-  .cards-set-item {
-    width: 450px;
-  }
-}
-
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .cards-set-item {
     width: calc(100% / 2 - 30px);
