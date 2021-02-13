@@ -1,6 +1,8 @@
 .footer {
   padding: 60px 0px;
-  text-align: center;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 
   background-color: $footer-background-color;
 }
@@ -29,6 +31,10 @@
 /*присоединяйтесь*/
 .join {
   justify-content: center;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 165px;
+  }
+
   @media screen and (max-width: 1199px) {
     margin-bottom: 60px;
   }
@@ -48,6 +54,7 @@
 .contact-us {
   @media screen and (min-width: 768px) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: baseline;
   }
@@ -61,12 +68,18 @@
 .join-form {
   @media screen and (min-width: 1200px) {
     margin-left: 93px;
-    justify-content: center;
+
     align-items: center;
   }
 }
 .join-fild {
-  display: block;
+  /*display: block;*/
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 450px;
+  }
   margin-top: 20px;
 }
 .join-email {

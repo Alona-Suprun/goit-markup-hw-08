@@ -122,21 +122,20 @@ p {
   padding: 16px 32px 30px;
 }
 
+.socials .socials-item + .socials-item {
+  margin-left: 10px;
+}
+
 .socials-background {
   display: block;
   padding: 12px;
   height: 44px;
   width: 44px;
   border-radius: 50%;
-  margin-right: 10px;
   background-color: rgba(255, 255, 255, 0.1);
   color: #afb1b8;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.socials-background:nth-child(4n) {
-  margin-right: 0;
 }
 
 .socials-background:hover, .socials-background:focus {
@@ -854,8 +853,13 @@ img {
 
 .footer {
   padding: 60px 0px;
-  text-align: center;
   background-color: #2f303a;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer {
+    text-align: center;
+  }
 }
 
 .address {
@@ -891,6 +895,12 @@ img {
           justify-content: center;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .join {
+    margin-left: 165px;
+  }
+}
+
 @media screen and (max-width: 1199px) {
   .join {
     margin-bottom: 60px;
@@ -916,6 +926,8 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -935,9 +947,6 @@ img {
 @media screen and (min-width: 1200px) {
   .join-form {
     margin-left: 93px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -945,8 +954,22 @@ img {
 }
 
 .join-fild {
-  display: block;
+  /*display: block;*/
   margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .join-fild {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 450px;
+  }
 }
 
 .join-email {
